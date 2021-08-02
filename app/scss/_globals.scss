@@ -1,0 +1,29 @@
+:root {
+    --dark-primary: #130D08;
+    --accent-primary: #FEBD9D;
+    --accent-secondary: #FFEFE6;
+    --light: #FFF9F6;
+}
+
+@font-face {
+    font-family: 'Warframe';
+    src: url('../assets/fonts/custom.ttf');
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('../assets/fonts/BebasNeue-Bold.ttf');
+}
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Segoe UI';
+}
+
+*::selection{
+    background: var(--accent-secondary);
+}

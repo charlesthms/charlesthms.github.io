@@ -1,0 +1,181 @@
+/* BARRE DE NAVIGATION */
+
+header {
+    background-color: var(--dark-primary);
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 10% 0 10%;
+    z-index: 100;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    margin: 5px 0;
+    width: calc(100% - 2*10% - 84px);
+    height: 2px;
+    background-color: var(--accent-secondary);
+    top: 80%;
+}
+
+.thumb {
+    display: flex;
+    align-items: center;
+    height: 70%;
+    margin-right: auto;
+
+    > img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    
+}
+
+.title {
+    padding: 0 0 0 20px;
+
+    >h1 {
+        font-family: 'Warframe';
+        font-size: 25px;
+        font-weight: 300;
+        color: var(--accent-primary);
+        margin: 5px 0;
+    }
+
+    >h3 {
+        font-size: 15px;
+        font-weight: 300;
+        color: var(--accent-secondary);
+    }
+}
+
+.links {
+    flex-direction: column;
+
+    li {
+        display: inline-block;
+        padding: 0 40px;
+    }
+
+    li a {
+        color: var(--accent-secondary);
+        transition: width .2s ease-in;
+        position: relative;
+    }
+
+    li a::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        background: var(--accent-secondary);
+        transition: width .3s ease-in-out 0s;
+        width: 0;
+        left: 0;
+        bottom: -24px;
+    }
+
+    li a:hover::after {
+        width: 100%;
+    }
+
+    ul {
+        padding: 0;
+    }
+}
+
+.small li {
+    opacity: 0;
+}
+
+.contact {
+    margin: 0 0 0 5%;
+    padding: 8px 35px;
+    border-radius:25px;
+    color: var(--dark-primary);
+    background-color: var(--accent-primary);
+    transition: all .2s ease-in;
+}
+
+.contact:hover {
+    background-color: var(--accent-secondary);
+}
+
+.links li a.active::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background: var(--accent-secondary);
+    transition: width .3s ease-in-out 0s;
+    width: 100%;
+    left: 0;
+    bottom: -24px;   
+}
+
+.nav-lg {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-s > nav > .links {
+    position: fixed;
+    z-index: 99;
+    height: 0;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-primary);
+    overflow: hidden;
+    transition: all .8s cubic-bezier(.7,0,.32,.99);
+}
+
+/* HAMBURGER MENU */
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 35px;
+    height: 30px;
+    position: fixed;
+    top: 35px;
+    right: 50px;
+    cursor: pointer;
+}
+
+.line {
+    width: 100%;
+    height: 3px;
+    background-color: var(--accent-secondary);
+    border-radius: 8px;
+    transition: all .8s;
+}
+
+.change .line-1 {
+    transform: rotateZ(-405deg) translate(-8px, 6px);
+}
+
+.change .line-2 {
+    opacity: 0;
+}
+
+.change .line-3 {
+    transform: rotateZ(405deg) translate(-8px, -6px);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(200px);
+    } to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
