@@ -28,7 +28,7 @@
           box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 *::-moz-selection {
@@ -803,7 +803,6 @@ header::after {
   background-color: var(--light);
   -webkit-box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.25);
-  font-family: 'Inter', sans-serif;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -836,6 +835,7 @@ header::after {
 }
 
 .prices .pricing .card h1 {
+  font-family: 'Inter', sans-serif;
   font-weight: bold;
   font-size: 36px;
   padding: 30px 0;
@@ -853,6 +853,7 @@ header::after {
   width: 90%;
   margin: 10% auto 0 auto;
   text-align: left;
+  font-family: 'Inter', sans-serif;
 }
 
 .prices .pricing .card > .details.unique {
@@ -993,7 +994,7 @@ header::after {
     padding: 20px 0;
   }
   .prices .pricing > .card > .details > .detail {
-    font-size: 16px;
+    font-size: 15px;
   }
   .prices .pricing > .card::after {
     top: 15%;
