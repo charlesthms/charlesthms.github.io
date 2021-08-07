@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.prices {
+    >div {
+        background-color: var(--accent-secondary);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0 10% 0 10%;
+    }
+    
+    .heading {
+        z-index: 100;
+        text-align: center;
+        margin: 100px auto 0 auto;
+        width: 100%;
+
+        >p {
+            font-family: 'Inter', sans-serif;
+            font-size: 20px;
+            margin: 40px 0 0 0;
+        }
+
+        >h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 50px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        >h1::after {
+            position: absolute;
+            content: "";
+            width: 40%;
+            height: 5px;
+            background-color: var(--dark-primary);
+            left: 0;
+            bottom: 0;
+        }
+    }
+
+    .pricing {
+
+        display: flex;
+        margin: 0 auto;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 80%;
+
+        .card {
+            width: 30%;
+            height: 490px;
+            border-radius: 25px;
+            background-color: var(--light);
+            box-shadow: 0px 7px 7px 0px rgba(0,0,0,0.25);
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: '';
+                height: 1px;
+                width: 90%;
+                background-color: #febd9d8f;
+                top: 20%;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+            
+            &.main {
+                transform: translateY(-20px);
+                background-color: var(--dark-primary);
+                background-image: url(./../../assets/img/topo.svg);
+                color: white;
+            }
+
+            h1 {
+                font-weight: bold;
+                font-size: 36px;
+                padding: 30px 0;
+            }
+
+            &>.details{
+                display: flex;
+                flex-direction: column;
+                height: 80%;
+                width: 90%;
+                margin: 10% auto 0 auto;
+                text-align: left;
+
+                &.unique{
+                    margin: 6% auto 0 auto;
+
+                    >.seasons{
+                        font-weight: bold;
+                        
+                        >p {
+                            position: relative;
+                            display: inline-block;
+                        }
+                        >p::after{
+                            position: absolute;
+                            content: '';
+                            width: 40%;
+                            height: 2px;
+                            background-color: var(--dark-primary);
+                            bottom: 0;
+                            left: 0;
+                        }
+                    }
+                }
+
+                &>.detail {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    align-items: center;
+                    width: 100%;
+                    font-size: 16px;
+                    padding: 15px 0;
+
+                    >img {
+                        width: 16px;
+                        height: 16px;
+                        margin-right: 10px;
+                    }
+
+                    >p {
+                        display: inline-block;
+                    }
+                }
+            }
+
+            &>.price {
+
+                display: flex;
+                justify-content: center;
+                align-items: baseline;
+                margin: 0 auto 30px auto;
+                background-color: var(--accent-secondary);
+                color: var(--dark-primary);
+                width: 90%;
+                height: 10%;
+                border-radius: 8px;
+
+                &.inverse {
+                    color: var(--accent-secondary);
+                    background-color: var(--dark-primary);
+                }
+
+                .number {
+                    font-size: 36px;
+                    font-weight: bold;
+                }
+
+                .currency {
+                    font-size: 20px;
+                    transform: translate(2px, -11px);
+                }
+
+                .month {
+                    font-size: 18px;
+                    transform: translate(5px, -1px);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+
+    .prices {
+        .pricing {
+            flex-direction: column;
+
+            .card {
+                width: 80%;
+                height: 490px;
+                margin: 10% auto;
+
+                &.main {
+                    transform: none;
+                }
+            }
+        }
+    }
+
+}

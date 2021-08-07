@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :root {
   --dark-primary: #130D08;
   --accent-primary: #FEBD9D;
@@ -398,9 +399,10 @@ header::after {
     width: 30px;
     height: 30px;
   }
-  .discover-small-screen {
-    display: none;
-  }
+}
+
+.discover-small-screen {
+  display: none;
 }
 
 @media (max-width: 850px) {
@@ -581,7 +583,7 @@ header::after {
   background-color: var(--dark-primary);
   color: var(--accent-secondary);
   padding: 0 10% 0 10%;
-  height: 100vh;
+  height: 50vh;
 }
 
 .landing > div::after {
@@ -621,9 +623,23 @@ header::after {
 }
 
 .left {
+  padding-top: 30px;
   height: 100%;
   width: 715px;
   background-color: #322725;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .left::before {
@@ -639,7 +655,6 @@ header::after {
 .left > p {
   max-width: 46%;
   text-align: center;
-  margin: 40px auto;
   font-weight: 600;
 }
 
@@ -647,9 +662,6 @@ header::after {
   width: 30px;
   height: 30px;
   color: var(--accent-primary);
-  position: relative;
-  left: calc(715px / 2 - 15px);
-  bottom: 20px;
   -webkit-animation: floating 2s infinite ease-in-out;
           animation: floating 2s infinite ease-in-out;
 }
@@ -717,5 +729,231 @@ header::after {
   display: flex;
   background-color: var(--accent-secondary);
   padding: 0 10% 0 10%;
+}
+
+.prices > div {
+  background-color: var(--accent-secondary);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0 10% 0 10%;
+}
+
+.prices .heading {
+  z-index: 100;
+  text-align: center;
+  margin: 100px auto 0 auto;
+  width: 100%;
+}
+
+.prices .heading > p {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  margin: 40px 0 0 0;
+}
+
+.prices .heading > h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 50px;
+  position: relative;
+  display: inline-block;
+}
+
+.prices .heading > h1::after {
+  position: absolute;
+  content: "";
+  width: 40%;
+  height: 5px;
+  background-color: var(--dark-primary);
+  left: 0;
+  bottom: 0;
+}
+
+.prices .pricing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 80%;
+}
+
+.prices .pricing .card {
+  width: 30%;
+  height: 490px;
+  border-radius: 25px;
+  background-color: var(--light);
+  -webkit-box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.25);
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.prices .pricing .card::after {
+  position: absolute;
+  content: '';
+  height: 1px;
+  width: 90%;
+  background-color: #febd9d8f;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.prices .pricing .card.main {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+  background-color: var(--dark-primary);
+  background-image: url(./../../assets/img/topo.svg);
+  color: white;
+}
+
+.prices .pricing .card h1 {
+  font-weight: bold;
+  font-size: 36px;
+  padding: 30px 0;
+}
+
+.prices .pricing .card > .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 80%;
+  width: 90%;
+  margin: 10% auto 0 auto;
+  text-align: left;
+}
+
+.prices .pricing .card > .details.unique {
+  margin: 6% auto 0 auto;
+}
+
+.prices .pricing .card > .details.unique > .seasons {
+  font-weight: bold;
+}
+
+.prices .pricing .card > .details.unique > .seasons > p {
+  position: relative;
+  display: inline-block;
+}
+
+.prices .pricing .card > .details.unique > .seasons > p::after {
+  position: absolute;
+  content: '';
+  width: 40%;
+  height: 2px;
+  background-color: var(--dark-primary);
+  bottom: 0;
+  left: 0;
+}
+
+.prices .pricing .card > .details > .detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  font-size: 16px;
+  padding: 15px 0;
+}
+
+.prices .pricing .card > .details > .detail > img {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+.prices .pricing .card > .details > .detail > p {
+  display: inline-block;
+}
+
+.prices .pricing .card > .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin: 0 auto 30px auto;
+  background-color: var(--accent-secondary);
+  color: var(--dark-primary);
+  width: 90%;
+  height: 10%;
+  border-radius: 8px;
+}
+
+.prices .pricing .card > .price.inverse {
+  color: var(--accent-secondary);
+  background-color: var(--dark-primary);
+}
+
+.prices .pricing .card > .price .number {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.prices .pricing .card > .price .currency {
+  font-size: 20px;
+  -webkit-transform: translate(2px, -11px);
+          transform: translate(2px, -11px);
+}
+
+.prices .pricing .card > .price .month {
+  font-size: 18px;
+  -webkit-transform: translate(5px, -1px);
+          transform: translate(5px, -1px);
+}
+
+@media (max-width: 800px) {
+  .prices .pricing {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .prices .pricing .card {
+    width: 80%;
+    height: 490px;
+    margin: 10% auto;
+  }
+  .prices .pricing .card.main {
+    -webkit-transform: none;
+            transform: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
