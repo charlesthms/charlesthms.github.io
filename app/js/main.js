@@ -1,6 +1,6 @@
 let myFullpage = new fullpage('#fullpage', {
     scrollOverflow: true,
-    anchors:['landing', 'discover', 'prices'],
+    anchors:['landing', 'discover', 'prices', 'footer'],
     navigation: true,
     sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE']
 });
