@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdoc_2=self.webpackChunkdoc_2||[]).push([[24],{254:e=>{e.exports=JSON.parse('{"title":"Protocol SERIEL","description":"description","slug":"/category/protocol-seriel","permalink":"/category/protocol-seriel","navigation":{"previous":{"title":"MTQ","permalink":"/can/mtq"},"next":{"title":"CAM","permalink":"/seriel/cam"}}}')}}]);
